@@ -47,21 +47,20 @@
 // CATEGORY CARDS
 
 .card {
+  position: relative;
+  width: 325px;
+  top: -20px;
+  padding: 25px;
   background-color: $cl-dark-blue2;
   border-radius: 12px;
-  width: 325px;
-  padding: 25px;
   z-index: 2;
-  top: -20px;
-  position: relative;
 
   &__header {
+    position: relative;
+    width: 325px;
     height: 60px;
     border-radius: 12px;
-    background-color: $cl-red-work;
     overflow: hidden;
-    width: 325px;
-    position: relative;
   }
 
   &__info {
@@ -72,8 +71,8 @@
 
   &__name {
     font-size: 18px;
-    color: #fff;
     font-weight: 500;
+    color: #fff;
     margin-bottom: 4px;
   }
 
@@ -85,8 +84,8 @@
 
   &__stats {
     font-size: 30px;
-    color: #fff;
     font-weight: 300;
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -96,4 +95,28 @@
       color: $cl-pale-blue;
     }
   }
+}
+
+.work {
+  background-color: $cl-red-work;
+}
+
+.play {
+  background-color: $cl-blue-play;
+}
+
+.study {
+  background-color: $cl-red-study;
+}
+
+.exercise {
+  background-color: $cl-green-exercise;
+}
+
+.social {
+  background-color: $cl-violet-social;
+}
+
+.self_care {
+  background-color: $cl-orange-self_care;
 }

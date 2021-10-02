@@ -77,21 +77,20 @@ body {
 }
 
 .card {
+  position: relative;
+  width: 325px;
+  top: -20px;
+  padding: 25px;
   background-color: #1c1f4a;
   border-radius: 12px;
-  width: 325px;
-  padding: 25px;
   z-index: 2;
-  top: -20px;
-  position: relative;
 }
 .card__header {
+  position: relative;
+  width: 325px;
   height: 60px;
   border-radius: 12px;
-  background-color: #ff8c66;
   overflow: hidden;
-  width: 325px;
-  position: relative;
 }
 .card__info {
   display: -webkit-box;
@@ -106,8 +105,8 @@ body {
 }
 .card__name {
   font-size: 18px;
-  color: #fff;
   font-weight: 500;
+  color: #fff;
   margin-bottom: 4px;
 }
 .card__image {
@@ -117,8 +116,8 @@ body {
 }
 .card__stats {
   font-size: 30px;
-  color: #fff;
   font-weight: 300;
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,6 +131,30 @@ body {
 .card__stats--previous {
   font-size: 15px;
   color: #bdc1ff;
+}
+
+.work {
+  background-color: #ff8c66;
+}
+
+.play {
+  background-color: #56c2e6;
+}
+
+.study {
+  background-color: #ff5c7c;
+}
+
+.exercise {
+  background-color: #4acf81;
+}
+
+.social {
+  background-color: #7536d3;
+}
+
+.self_care {
+  background-color: #f1c65b;
 }
 
 .dashboard {
