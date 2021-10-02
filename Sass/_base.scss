@@ -1,0 +1,42 @@
+// Colors variables
+
+$cl-blue: hsl(246, 80%, 60%);
+$cl-red-work: hsl(15, 100%, 70%);
+$cl-blue-play: hsl(195, 74%, 62%);
+$cl-red-study: hsl(348, 100%, 68%);
+$cl-green-exercise: hsl(145, 58%, 55%);
+$cl-violet-social: hsl(264, 64%, 52%);
+$cl-orange-self_care: hsl(43, 84%, 65%);
+$cl-dark-blue1: hsl(226, 43%, 10%);
+$cl-dark-blue2: hsl(235, 46%, 20%);
+$cl-desaturated-blue: hsl(235, 45%, 61%);
+$cl-pale-blue: hsl(236, 100%, 87%);
+
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  background-color: hsl(226, 43%, 10%);
+  background-size: cover;
+  font-family: "Rubik", sans-serif;
+}
+
+// Atribution below site
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

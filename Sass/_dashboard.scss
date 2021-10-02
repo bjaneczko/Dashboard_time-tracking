@@ -1,0 +1,11 @@
+.dashboard {
+  padding: 5rem 2.5rem;
+  display: grid;
+  justify-content: center;
+  row-gap: 2.5rem;
+}
+.primary_card {
+  background-color: $cl-dark-blue2;
+  border-radius: 1.2rem;
+  width: 325px;
+}
