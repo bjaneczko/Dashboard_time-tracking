@@ -39,7 +39,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2.5rem 2.5rem;
+  padding: 35px 25px;
   border-radius: 1.2rem;
   background-color: #5847eb;
 }
@@ -52,6 +52,7 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    padding: 40px;
   }
 }
 .user__avatar {
@@ -59,7 +60,7 @@ body {
   width: 7rem;
   border-radius: 50%;
   border: 3px solid #fff;
-  margin-right: 20px;
+  margin-right: 15px;
 }
 @media screen and (min-width: 800px) {
   .user__avatar {
@@ -86,7 +87,7 @@ body {
 @media screen and (min-width: 800px) {
   .user__info--name {
     font-size: 5rem;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
   }
 }
 
@@ -115,10 +116,10 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 3.5rem;
+    padding: 4rem;
   }
   .menu__item {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .menu__item:not(:last-child) {
     margin-bottom: 2.5rem;
@@ -127,13 +128,20 @@ body {
 
 .card {
   position: relative;
+  top: -20px;
   width: 325px;
   height: auto;
-  top: -20px;
-  padding: 25px;
+  padding: 30px;
+  padding-bottom: 0;
   background-color: #1c1f4a;
   border-radius: 12px;
   z-index: 2;
+}
+@media screen and (min-width: 800px) {
+  .card {
+    padding: 40px;
+    padding-bottom: 0;
+  }
 }
 .card__header {
   position: relative;
@@ -161,8 +169,7 @@ body {
 }
 @media screen and (min-width: 800px) {
   .card__name {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 25px;
   }
 }
 .card__image {
@@ -186,24 +193,23 @@ body {
 }
 @media screen and (min-width: 800px) {
   .card__stats {
-    font-size: 60px;
+    font-size: 75px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    margin-top: 25px;
   }
 }
 .card__stats--previous {
   font-size: 15px;
   color: #bdc1ff;
-}
-@media screen and (min-width: 800px) {
-  .card__stats--previous {
-    margin: 20px 0 20px 0;
-  }
 }
 
 .work {
@@ -231,22 +237,43 @@ body {
 }
 
 .dashboard {
-  padding: 5rem 2.5rem;
+  width: 325px;
+  margin: 0 auto;
+  padding: 5rem;
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
   row-gap: 2.5rem;
 }
 @media screen and (min-width: 800px) {
   .dashboard {
+    grid-template-columns: repeat(2, -webkit-min-content);
+    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: repeat(auto, -webkit-min-content);
+    grid-template-rows: repeat(auto, min-content);
+    -webkit-column-gap: 2.5rem;
+       -moz-column-gap: 2.5rem;
+            column-gap: 2.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .dashboard {
+    grid-template-columns: repeat(3, -webkit-min-content);
+    grid-template-columns: repeat(3, min-content);
+    grid-template-rows: repeat(auto, -webkit-min-content);
+    grid-template-rows: repeat(auto, min-content);
+    -webkit-column-gap: 2.5rem;
+       -moz-column-gap: 2.5rem;
+            column-gap: 2.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .dashboard {
     grid-template-columns: repeat(4, -webkit-min-content);
     grid-template-columns: repeat(4, min-content);
-    grid-template-rows: repeat(2, -webkit-min-content);
-    grid-template-rows: repeat(2, min-content);
+    grid-template-rows: repeat(auto, -webkit-min-content);
+    grid-template-rows: repeat(auto, min-content);
     -webkit-column-gap: 2.5rem;
        -moz-column-gap: 2.5rem;
             column-gap: 2.5rem;
@@ -258,4 +285,12 @@ body {
   border-radius: 1.2rem;
   width: 325px;
   grid-row: span 2;
+  height: auto;
+}
+
+.category_card {
+  background-color: #1c1f4a;
+  border-radius: 1.2rem;
+  width: 325px;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */

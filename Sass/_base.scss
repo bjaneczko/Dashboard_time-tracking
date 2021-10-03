@@ -12,6 +12,10 @@ $cl-dark-blue2: hsl(235, 46%, 20%);
 $cl-desaturated-blue: hsl(235, 45%, 61%);
 $cl-pale-blue: hsl(236, 100%, 87%);
 
+// Total breakpoints
+
+$br-medium: 800px;
+
 *::before,
 *::after,
 * {

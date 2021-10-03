@@ -1,13 +1,26 @@
 .dashboard {
-  padding: 5rem 2.5rem;
+  width: 325px;
+  margin: 0 auto;
+  padding: 5rem;
   display: grid;
   justify-content: center;
-  align-items: start;
   row-gap: 2.5rem;
 
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: $br-medium) {
+    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: repeat(auto, min-content);
+    column-gap: 2.5rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: repeat(3, min-content);
+    grid-template-rows: repeat(auto, min-content);
+    column-gap: 2.5rem;
+  }
+
+  @media screen and (min-width: 1440px) {
     grid-template-columns: repeat(4, min-content);
-    grid-template-rows: repeat(2, min-content);
+    grid-template-rows: repeat(auto, min-content);
     column-gap: 2.5rem;
   }
 }
@@ -17,4 +30,12 @@
   border-radius: 1.2rem;
   width: 325px;
   grid-row: span 2;
+  height: auto;
+}
+
+.category_card {
+  background-color: $cl-dark-blue2;
+  border-radius: 1.2rem;
+  width: 325px;
+  height: auto;
 }

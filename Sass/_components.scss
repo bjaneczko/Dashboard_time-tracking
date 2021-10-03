@@ -4,13 +4,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2.5rem 2.5rem;
+  padding: 35px 25px;
   border-radius: 1.2rem;
   background-color: $cl-blue;
 
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: $br-medium) {
     flex-direction: column;
     align-items: flex-start;
+    padding: 40px;
   }
 
   &__avatar {
@@ -18,9 +19,9 @@
     width: 7rem;
     border-radius: 50%;
     border: 3px solid #fff;
-    margin-right: 20px;
+    margin-right: 15px;
 
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: $br-medium) {
       height: 10rem;
       width: 10rem;
       margin-bottom: 30px;
@@ -32,7 +33,7 @@
       font-size: 1.5rem;
       color: $cl-pale-blue;
       font-weight: 300;
-      @media screen and (min-width: 800px) {
+      @media screen and (min-width: $br-medium) {
         font-size: 2rem;
       }
     }
@@ -40,9 +41,9 @@
       font-size: 2.5rem;
       color: #fff;
       font-weight: 300;
-      @media screen and (min-width: 800px) {
+      @media screen and (min-width: $br-medium) {
         font-size: 5rem;
-        margin-bottom: 6rem;
+        margin-bottom: 4rem;
       }
     }
   }
@@ -65,13 +66,13 @@
       color: #fff;
     }
   }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: $br-medium) {
     &__list {
       flex-direction: column;
-      padding: 3.5rem;
+      padding: 4rem;
     }
     &__item {
-      font-size: 2rem;
+      font-size: 2.5rem;
       &:not(:last-child) {
         margin-bottom: 2.5rem;
       }
@@ -83,13 +84,19 @@
 
 .card {
   position: relative;
+  top: -20px;
   width: 325px;
   height: auto;
-  top: -20px;
-  padding: 25px;
+  padding: 30px;
+  padding-bottom: 0;
   background-color: $cl-dark-blue2;
   border-radius: 12px;
   z-index: 2;
+
+  @media screen and (min-width: $br-medium) {
+    padding: 40px;
+    padding-bottom: 0;
+  }
 
   &__header {
     position: relative;
@@ -110,9 +117,8 @@
     font-weight: 500;
     color: #fff;
     margin-bottom: 4px;
-    @media screen and (min-width: 800px) {
-      font-size: 20px;
-      margin-bottom: 20px;
+    @media screen and (min-width: $br-medium) {
+      font-size: 25px;
     }
   }
 
@@ -130,18 +136,17 @@
     justify-content: space-between;
     align-items: center;
 
-    @media screen and (min-width: 800px) {
-      font-size: 60px;
+    @media screen and (min-width: $br-medium) {
+      font-size: 75px;
       flex-direction: column;
+      justify-content: center;
       align-items: flex-start;
+      margin-top: 25px;
     }
 
     &--previous {
       font-size: 15px;
       color: $cl-pale-blue;
-      @media screen and (min-width: 800px) {
-        margin: 20px 0 20px 0;
-      }
     }
   }
 }
