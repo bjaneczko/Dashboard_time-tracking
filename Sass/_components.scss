@@ -8,12 +8,23 @@
   border-radius: 1.2rem;
   background-color: $cl-blue;
 
+  @media screen and (min-width: 800px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   &__avatar {
     height: 7rem;
     width: 7rem;
     border-radius: 50%;
     border: 3px solid #fff;
     margin-right: 20px;
+
+    @media screen and (min-width: 800px) {
+      height: 10rem;
+      width: 10rem;
+      margin-bottom: 30px;
+    }
   }
 
   &__info {
@@ -21,11 +32,18 @@
       font-size: 1.5rem;
       color: $cl-pale-blue;
       font-weight: 300;
+      @media screen and (min-width: 800px) {
+        font-size: 2rem;
+      }
     }
     &--name {
       font-size: 2.5rem;
       color: #fff;
       font-weight: 300;
+      @media screen and (min-width: 800px) {
+        font-size: 5rem;
+        margin-bottom: 6rem;
+      }
     }
   }
 }
@@ -41,6 +59,23 @@
     font-size: 1.8rem;
     font-weight: 300;
     color: $cl-pale-blue;
+    cursor: pointer;
+    &:hover,
+    &:active {
+      color: #fff;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    &__list {
+      flex-direction: column;
+      padding: 3.5rem;
+    }
+    &__item {
+      font-size: 2rem;
+      &:not(:last-child) {
+        margin-bottom: 2.5rem;
+      }
+    }
   }
 }
 
@@ -74,6 +109,10 @@
     font-weight: 500;
     color: #fff;
     margin-bottom: 4px;
+    @media screen and (min-width: 800px) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
   }
 
   &__image {
@@ -90,9 +129,18 @@
     justify-content: space-between;
     align-items: center;
 
+    @media screen and (min-width: 800px) {
+      font-size: 60px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     &--previous {
       font-size: 15px;
       color: $cl-pale-blue;
+      @media screen and (min-width: 800px) {
+        margin: 20px 0 20px 0;
+      }
     }
   }
 }
