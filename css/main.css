@@ -253,6 +253,12 @@ main {
   z-index: 2;
   border-radius: 20px;
   color: #fff;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.card__body:hover {
+  background-color: #6f76c8;
 }
 @media screen and (min-width: 800px) {
   .card__body {

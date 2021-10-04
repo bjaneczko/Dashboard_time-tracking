@@ -139,6 +139,11 @@
     z-index: 2;
     border-radius: 20px;
     color: #fff;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $cl-desaturated-blue;
+    }
 
     @media screen and (min-width: $br-small) {
       justify-content: space-between;
