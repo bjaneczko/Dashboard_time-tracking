@@ -89,6 +89,11 @@ main {
   grid-row: span 2;
   width: 325px;
 }
+@media screen and (min-width: 800px) {
+  .user-card {
+    width: 280px;
+  }
+}
 
 .owner {
   display: -webkit-box;
@@ -100,9 +105,24 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3rem;
+  padding: 30px;
   background-color: #5847eb;
   border-radius: 20px;
+}
+@media screen and (min-width: 800px) {
+  .owner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 40px;
+  }
 }
 .owner__avatar {
   width: 8rem;
@@ -123,6 +143,12 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (min-width: 800px) {
+  .owner__information {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+}
 .owner__information p {
   font-size: 1.5rem;
   font-weight: 300;
@@ -131,6 +157,11 @@ main {
   font-size: 2.3rem;
   font-weight: 300;
   color: #fff;
+}
+@media screen and (min-width: 800px) {
+  .owner__information h1 {
+    font-size: 4rem;
+  }
 }
 
 .menu {
@@ -160,7 +191,7 @@ main {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding: 4rem;
+    padding: 40px;
   }
 }
 .menu__button {
@@ -178,10 +209,30 @@ main {
 .menu__button:hover, .menu__button:focus {
   color: #fff;
 }
+@media screen and (min-width: 800px) {
+  .menu__button {
+    font-size: 1.9rem;
+  }
+  .menu__button:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
 
 .card {
   border-radius: 20px;
   width: 325px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 800px) {
+  .card {
+    width: 280px;
+  }
 }
 .card__header {
   position: relative;
@@ -202,6 +253,15 @@ main {
   z-index: 2;
   border-radius: 20px;
   color: #fff;
+}
+@media screen and (min-width: 800px) {
+  .card__body {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%;
+    padding: 40px;
+  }
 }
 
 .body__category {
@@ -232,14 +292,40 @@ main {
           align-items: center;
   margin-top: 10px;
 }
+@media screen and (min-width: 800px) {
+  .body__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 0px;
+  }
+}
 .body__content h1 {
   font-size: 3rem;
   font-weight: 300;
+}
+@media screen and (min-width: 800px) {
+  .body__content h1 {
+    font-size: 6rem;
+  }
 }
 .body__content p {
   font-size: 1.5rem;
   font-weight: 300;
   opacity: 60%;
+}
+@media screen and (min-width: 800px) {
+  .body__content p {
+    font-size: 1.6rem;
+    margin-top: 10px;
+  }
 }
 
 .header__img {
