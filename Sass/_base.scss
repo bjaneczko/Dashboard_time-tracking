@@ -1,12 +1,12 @@
 // Colors variables
 
 $cl-blue: hsl(246, 80%, 60%);
-$cl-red-work: hsl(15, 100%, 70%);
-$cl-blue-play: hsl(195, 74%, 62%);
-$cl-red-study: hsl(348, 100%, 68%);
-$cl-green-exercise: hsl(145, 58%, 55%);
-$cl-violet-social: hsl(264, 64%, 52%);
-$cl-orange-self_care: hsl(43, 84%, 65%);
+$cl-work: hsl(15, 100%, 70%);
+$cl-play: hsl(195, 74%, 62%);
+$cl-study: hsl(348, 100%, 68%);
+$cl-exercise: hsl(145, 58%, 55%);
+$cl-social: hsl(264, 64%, 52%);
+$cl-self-care: hsl(43, 84%, 65%);
 $cl-dark-blue1: hsl(226, 43%, 10%);
 $cl-dark-blue2: hsl(235, 46%, 20%);
 $cl-desaturated-blue: hsl(235, 45%, 61%);
@@ -14,7 +14,9 @@ $cl-pale-blue: hsl(236, 100%, 87%);
 
 // Total breakpoints
 
-$br-medium: 800px;
+$br-small: 800px;
+$br-medium: 1200px;
+$br-large: 1440px;
 
 *::before,
 *::after,
@@ -36,6 +38,13 @@ body {
   color: $cl-pale-blue;
 }
 
+main {
+  min-height: 95vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 // Atribution below site
 
 .attribution {

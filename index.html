@@ -21,168 +21,260 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div class="dashboard">
-      <!-- PRIMARY CARD WITH USER INFO & MENU -->
-      <div class="primary_card">
-        <div class="user">
-          <img
-            src="images/image-jeremy.png"
-            alt="User avatar"
-            class="user__avatar"
-          />
-          <div class="user__info">
-            <p class="user__info--report">Report for</p>
-            <h1 class="user__info--name">Jeremy Robson</h1>
+    <main>
+      <div class="dashboard">
+        <!-- USER CARD WITH USER INFO & MENU -->
+        <div class="user-card">
+
+          <div class="owner">
+              <img src="images/image-jeremy.png" alt="Owner" class="owner__avatar">
+              <div class="owner__information">
+                <p>Report for</p>
+                <h1>Jeremy Robson</h1>
+              </div>
+          </div>
+
+          <div class="menu">
+            <button onclick="changeTo('daily')" class="menu__button">Daily</button>
+            <button onclick="changeTo('weekly')" class="menu__button">Weekly</button>
+            <button onclick="changeTo('monthly')" class="menu__button">Monthly</button>
           </div>
         </div>
-        <div class="menu">
-          <ul class="menu__list">
-            <li class="menu__item">Daily</li>
-            <li class="menu__item">Weekly</li>
-            <li class="menu__item">Monthly</li>
-          </ul>
-        </div>
-      </div>
-      <!-- CATEGORY CARDS WITH STATS -->
-      <div class="category_card">
-        <div class="card__header work">
-          <img src="images/icon-work.svg" alt="Work" class="card__image" />
+        <!-- CATEGORY CARDS WITH STATS -->
+        
+        <div class="card work">
+          <div class="card__header">
+            <img src="images/icon-work.svg" alt="Work" class="header__img">
+          </div>
+          <div class="card__body">
+            <div class="body__category">
+              <h2 class="category__title">Work</h2>
+              <img src="images/icon-ellipsis.svg" alt="Ellipsis" class="card__ellipsis">
+            </div>
+            <div class="body__content">
+              <h1 class="content__current-time" id="work-current-display">32hrs</h1>
+              <p class="content__previous-time" id="work-previous-display">Last Week - 36hrs</p>
+            </div>
+          </div>
         </div>
 
-        <div class="card">
-          <div class="card__info">
-            <p class="card__name">Work</p>
-            <object
-              data="/images/icon-ellipsis.svg"
-              width="22"
-              height="5"
-            ></object>
+        <div class="card play">
+          <div class="card__header">
+            <img src="images/icon-play.svg" alt="play" class="header__img">
           </div>
-          <div class="card__stats">
-            <p>32hrs</p>
-            <p class="card__stats--previous">Last week - 36hr</p>
+          <div class="card__body">
+            <div class="body__category">
+              <h2 class="category__title">Play</h2>
+              <img src="images/icon-ellipsis.svg" alt="Ellipsis" class="card__ellipsis">
+            </div>
+            <div class="body__content">
+              <h1 class="content__current-time" id="play-current-display">32hrs</h1>
+              <p class="content__previous-time" id="play-previous-display">Last Week - 36hrs</p>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div class="category_card">
-        <div class="card__header play">
-          <img src="images/icon-play.svg" alt="Play" class="card__image" />
         </div>
 
-        <div class="card">
-          <div class="card__info">
-            <p class="card__name">Play</p>
-            <object
-              data="/images/icon-ellipsis.svg"
-              width="22"
-              height="5"
-            ></object>
+        <div class="card study">
+          <div class="card__header">
+            <img src="images/icon-study.svg" alt="study" class="header__img">
           </div>
-          <div class="card__stats">
-            <p>10hrs</p>
-            <p class="card__stats--previous">Last week - 8hrs</p>
+          <div class="card__body">
+            <div class="body__category">
+              <h2 class="category__title">Study</h2>
+              <img src="images/icon-ellipsis.svg" alt="Ellipsis" class="card__ellipsis">
+            </div>
+            <div class="body__content">
+              <h1 class="content__current-time" id="study-current-display">32hrs</h1>
+              <p class="content__previous-time" id="study-previous-display">Last Week - 36hrs</p>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div class="category_card">
-        <div class="card__header study">
-          <img src="images/icon-study.svg" alt="Study" class="card__image" />
         </div>
 
-        <div class="card">
-          <div class="card__info">
-            <p class="card__name">Study</p>
-            <object
-              data="/images/icon-ellipsis.svg"
-              width="22"
-              height="5"
-            ></object>
+        <div class="card exercise">
+          <div class="card__header">
+            <img src="images/icon-exercise.svg" alt="exercise" class="header__img">
           </div>
-          <div class="card__stats">
-            <p>4hrs</p>
-            <p class="card__stats--previous">Last week - 7hrs</p>
+          <div class="card__body">
+            <div class="body__category">
+              <h2 class="category__title">Exercise</h2>
+              <img src="images/icon-ellipsis.svg" alt="Ellipsis" class="card__ellipsis">
+            </div>
+            <div class="body__content">
+              <h1 class="content__current-time" id="exercise-current-display">32hrs</h1>
+              <p class="content__previous-time" id="exercise-previous-display">Last Week - 36hrs</p>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div class="category_card">
-        <div class="card__header exercise">
-          <img
-            src="images/icon-exercise.svg"
-            alt="Exercise"
-            class="card__image"
-          />
         </div>
 
-        <div class="card">
-          <div class="card__info">
-            <p class="card__name">Exercise</p>
-            <object
-              data="/images/icon-ellipsis.svg"
-              width="22"
-              height="5"
-            ></object>
+        <div class="card social">
+          <div class="card__header">
+            <img src="images/icon-social.svg" alt="social" class="header__img">
           </div>
-          <div class="card__stats">
-            <p>4hrs</p>
-            <p class="card__stats--previous">Last week - 5hrs</p>
+          <div class="card__body">
+            <div class="body__category">
+              <h2 class="category__title">Social</h2>
+              <img src="images/icon-ellipsis.svg" alt="Ellipsis" class="card__ellipsis">
+            </div>
+            <div class="body__content">
+              <h1 class="content__current-time" id="social-current-display">32hrs</h1>
+              <p class="content__previous-time" id="social-previous-display">Last Week - 36hrs</p>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div class="category_card">
-        <div class="card__header social">
-          <img src="images/icon-social.svg" alt="Social" class="card__image" />
         </div>
 
-        <div class="card">
-          <div class="card__info">
-            <p class="card__name">Social</p>
-            <object
-              data="/images/icon-ellipsis.svg"
-              width="22"
-              height="5"
-            ></object>
+        <div class="card self-care">
+          <div class="card__header">
+            <img src="images/icon-self-care.svg" alt="self-care" class="header__img">
           </div>
-          <div class="card__stats">
-            <p>5hrs</p>
-            <p class="card__stats--previous">Last week - 10hrs</p>
+          <div class="card__body">
+            <div class="body__category">
+              <h2 class="category__title">Self Care</h2>
+              <img src="images/icon-ellipsis.svg" alt="Ellipsis" class="card__ellipsis">
+            </div>
+            <div class="body__content">
+              <h1 class="content__current-time" id="self-care-current-display">32hrs</h1>
+              <p class="content__previous-time" id="self-care-previous-display">Last Week - 36hrs</p>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div class="category_card">
-        <div class="card__header self_care">
-          <img
-            src="images/icon-self-care.svg"
-            alt="Self care"
-            class="card__image"
-          />
         </div>
 
-        <div class="card">
-          <div class="card__info">
-            <p class="card__name">Self care</p>
-            <object
-              data="/images/icon-ellipsis.svg"
-              width="22"
-              height="5"
-            ></object>
-          </div>
-          <div class="card__stats">
-            <p>2hrs</p>
-            <p class="card__stats--previous">Last week - 2hrs</p>
-          </div>
-        </div>
-      </div>
-    </div>
+        
+    </main>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >Coded by <a href="#">Bartlomiej Janeczko</a>.
+      > Coded by <a href="#">Bartlomiej Janeczko</a>.
     </div>
+    <script>
+       const data = [
+        {
+          title: "work",
+          timeframes: {
+            daily: {
+              current: 5,
+              previous: 7,
+            },
+            weekly: {
+              current: 32,
+              previous: 36,
+            },
+            monthly: {
+              current: 103,
+              previous: 128,
+            },
+          },
+        },
+        {
+          title: "play",
+          timeframes: {
+            daily: {
+              current: 1,
+              previous: 2,
+            },
+            weekly: {
+              current: 10,
+              previous: 8,
+            },
+            monthly: {
+              current: 23,
+              previous: 29,
+            },
+          },
+        },
+        {
+          title: "study",
+          timeframes: {
+            daily: {
+              current: 0,
+              previous: 1,
+            },
+            weekly: {
+              current: 4,
+              previous: 7,
+            },
+            monthly: {
+              current: 13,
+              previous: 19,
+            },
+          },
+        },
+        {
+          title: "exercise",
+          timeframes: {
+            daily: {
+              current: 1,
+              previous: 1,
+            },
+            weekly: {
+              current: 4,
+              previous: 5,
+            },
+            monthly: {
+              current: 11,
+              previous: 18,
+            },
+          },
+        },
+        {
+          title: "social",
+          timeframes: {
+            daily: {
+              current: 1,
+              previous: 3,
+            },
+            weekly: {
+              current: 5,
+              previous: 10,
+            },
+            monthly: {
+              current: 21,
+              previous: 23,
+            },
+          },
+        },
+        {
+          title: "self-care",
+          timeframes: {
+            daily: {
+              current: 0,
+              previous: 1,
+            },
+            weekly: {
+              current: 2,
+              previous: 2,
+            },
+            monthly: {
+              current: 7,
+              previous: 11,
+            },
+          },
+        },
+      ];
+
+      const timespans = {
+        daily: "day",
+        weekly: "week",
+        monthly: "month",
+      };
+
+      const maybePluralize = (count, noun, suffix = "s") =>
+        `${count}hr${count !== 1 ? suffix : ""}`;
+
+      function changeTo(timespan) {
+        for (let area of data) {
+          const { title } = area;
+          const timeframe = area.timeframes[timespan];
+
+          const current = document.getElementById(`${title}-current-display`);
+          const previous = document.getElementById(`${title}-previous-display`);
+
+          current.innerHTML = maybePluralize(timeframe.current, timeframe.current);
+          previous.innerHTML =
+            `Last ${timespans[timespan]} - ` +
+            maybePluralize(timeframe.previous, timeframe.previous);
+        }
+      }
+    </script>
   </body>
 </html>

@@ -1,41 +1,167 @@
 .dashboard {
-  width: 325px;
-  margin: 0 auto;
-  padding: 5rem;
   display: grid;
   justify-content: center;
-  row-gap: 2.5rem;
+  gap: 25px;
+  padding: 50px 0;
 
-  @media screen and (min-width: $br-medium) {
+  @media screen and (min-width: $br-small) {
     grid-template-columns: repeat(2, min-content);
     grid-template-rows: repeat(auto, min-content);
-    column-gap: 2.5rem;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $br-medium) {
     grid-template-columns: repeat(3, min-content);
     grid-template-rows: repeat(auto, min-content);
-    column-gap: 2.5rem;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $br-large) {
     grid-template-columns: repeat(4, min-content);
     grid-template-rows: repeat(auto, min-content);
-    column-gap: 2.5rem;
   }
 }
 
-.primary_card {
+.user-card {
   background-color: $cl-dark-blue2;
-  border-radius: 1.2rem;
-  width: 325px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
   grid-row: span 2;
-  height: auto;
+  width: 325px;
+}
+.owner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  background-color: $cl-blue;
+  border-radius: 20px;
+
+  &__avatar {
+    width: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    border: 3px solid #fff;
+  }
+
+  &__information {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 300;
+      color: #fff;
+    }
+  }
+}
+.menu {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 23px 30px;
+
+  @media screen and (min-width: $br-small) {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem;
+  }
+
+  &__button {
+    background: none;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: $cl-desaturated-blue;
+    transition: color 0.2s;
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
 }
 
-.category_card {
-  background-color: $cl-dark-blue2;
-  border-radius: 1.2rem;
+.card {
+  border-radius: 20px;
   width: 325px;
-  height: auto;
+  &__header {
+    position: relative;
+    height: 4rem;
+    z-index: 1;
+    overflow: hidden;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding: 23px;
+    background-color: $cl-dark-blue2;
+    z-index: 2;
+    border-radius: 20px;
+    color: #fff;
+  }
+}
+
+.body__category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+}
+
+.body__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  h1 {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    opacity: 60%;
+  }
+}
+
+.header__img {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  z-index: 2;
+}
+
+.work {
+  background-color: $cl-work;
+}
+
+.play {
+  background-color: $cl-play;
+}
+
+.study {
+  background-color: $cl-study;
+}
+.exercise {
+  background-color: $cl-exercise;
+}
+
+.social {
+  background-color: $cl-social;
+}
+
+.self-care {
+  background-color: $cl-self-care;
 }
