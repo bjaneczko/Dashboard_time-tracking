@@ -1,6 +1,6 @@
 # Frontend Mentor - Tip calculator app solution
 
-This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw/hub/time-tracking-dashboard-using-sass-and-js-GrQvHXPJR). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw/hub/time-tracking-dashboard-using-sass-and-js-GrQvHXPJR). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
